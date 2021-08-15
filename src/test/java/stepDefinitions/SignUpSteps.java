@@ -13,7 +13,7 @@ public class SignUpSteps {
 
 	@Given("^User launches browser and navigate to signup page$")
 	public void user_launches_browser_and_navigate_to_signup_page() throws Throwable {
-		System.setProperty("webdriver.chrome.driver", "./drivers\\chromedriver92.exe");
+		System.setProperty("webdriver.chrome.driver", MainUtils.getProp("DriverPath"));
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get(MainUtils.getProp("URL"));
